@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate Placeholders</title>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="400"></canvas>
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        function createPlaceholder(number) {
+            // Clear canvas
+            ctx.fillStyle = '#141414';
+            ctx.fillRect(0, 0, 400, 400);
+            
+            // Add text
+            ctx.fillStyle = '#5A5A5A';
+            ctx.font = '24px Arial';
+            ctx.textAlign = 'center';
+            ctx.fillText(`Photo ${number}`, 200, 200);
+            
+            // Create download link
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `placeholder-${number}.jpg`;
+                a.click();
+                URL.revokeObjectURL(url);
+            });
+        }
+        
+        // Generate all placeholders
+        for (let i = 1; i <= 12; i++) {
+            setTimeout(() => createPlaceholder(i), i * 100);
+        }
+    </script>
+</body>
+</html>

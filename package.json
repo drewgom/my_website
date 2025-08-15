@@ -1,0 +1,15 @@
+{
+  "name": "drew-gomez-website",
+  "version": "1.0.0",
+  "description": "Drew Gomez Photography Website",
+  "scripts": {
+    "generate-manifest": "node generate-manifest.js",
+    "update-images": "node generate-manifest.js"
+  },
+  "author": "Drew Gomez",
+  "license": "MIT",
+  "keywords": ["photography", "portfolio", "website"],
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
