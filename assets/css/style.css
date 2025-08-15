@@ -178,6 +178,18 @@ main {
 }
 
 /* Photos Page - Dominance of Imagery */
+/* Global photo constraint - never exceed 95% viewport width */
+.photo-item img,
+.photo-strip img,
+.photo-pair img,
+.photo-single img,
+.photo-triple img,
+.photo-triple-asym img,
+.photo-small img,
+.photo-tall img {
+  max-width: 95vw !important;
+}
+
 .photo-strip {
   margin-bottom: var(--large-gap);
 }

@@ -50,14 +50,16 @@ document.addEventListener('DOMContentLoaded', function() {
         const container = document.getElementById('photos-container');
         if (!container) return;
 
-        // Shuffle photos array
+        // Shuffle photos array and take only 80% of them
         const shuffledPhotos = [...photos].sort(() => Math.random() - 0.5);
+        const photosToShow = Math.floor(photos.length * 0.8);
+        const selectedPhotos = shuffledPhotos.slice(0, photosToShow);
         let photoIndex = 0;
         let html = '';
 
-        while (photoIndex < shuffledPhotos.length) {
+        while (photoIndex < selectedPhotos.length) {
             const pattern = getRandomPattern();
-            const layoutHTML = createLayoutBlock(pattern, shuffledPhotos, photoIndex);
+            const layoutHTML = createLayoutBlock(pattern, selectedPhotos, photoIndex);
             
             if (layoutHTML.html) {
                 html += layoutHTML.html;
