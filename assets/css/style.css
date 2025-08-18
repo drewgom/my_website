@@ -3,11 +3,11 @@
   /* Solid Color Backgrounds */
   --pure-white: #FFFFFF;
   --pure-black: #000000;
-  --muted-mustard: #C4A764;
+  --muted-brown: #8B6F47;
   
-  /* Typography - Futura Only */
-  --font-sans: "Futura";
-  --font-serif: "Futura";
+  /* Typography - Work Sans */
+  --font-sans: "Work Sans", sans-serif;
+  --font-serif: "Work Sans", sans-serif;
   
   /* Large-Scale Typography */
   --massive-title: 120px;
@@ -44,6 +44,7 @@ body {
   color: var(--pure-black);
   background-color: var(--pure-white);
   font-weight: 300;
+  cursor: default;
 }
 
 /* Stripped Down Navigation - Edge Placement */
@@ -74,10 +75,30 @@ body {
   color: var(--pure-black);
   text-decoration: none;
   transition: color 0.2s ease;
+  cursor: grab;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rotating-object {
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(45deg, var(--muted-brown), var(--pure-black));
+  border-radius: 2px;
+  animation: rotate3d 2s linear infinite;
+}
+
+@keyframes rotate3d {
+  0% { transform: rotateY(0deg) rotateX(0deg); }
+  25% { transform: rotateY(90deg) rotateX(0deg); }
+  50% { transform: rotateY(180deg) rotateX(90deg); }
+  75% { transform: rotateY(270deg) rotateX(180deg); }
+  100% { transform: rotateY(360deg) rotateX(360deg); }
 }
 
 .site-title:hover {
-  color: var(--muted-mustard);
+  color: var(--muted-brown);
 }
 
 /* Top placement nav - right aligned */
@@ -96,11 +117,12 @@ nav a {
   color: var(--pure-black);
   text-decoration: none;
   transition: color 0.2s ease;
+  cursor: grab;
 }
 
 nav a:hover,
 nav a.active {
-  color: var(--muted-mustard);
+  color: var(--muted-brown);
 }
 
 /* Main Content with Generous Space */
@@ -120,6 +142,8 @@ main {
   position: relative;
   overflow: hidden;
   margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .homepage-hero img {
@@ -178,6 +202,11 @@ main {
 }
 
 /* Photos Page - Dominance of Imagery */
+/* Photos page specific cursor */
+#photos-container {
+  cursor: crosshair;
+}
+
 /* Global photo constraint - never exceed 95% viewport width */
 .photo-item img,
 .photo-strip img,
@@ -463,11 +492,12 @@ main {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  cursor: zoom-out;
 }
 
 /* Hover States - Content First */
 .photo-item {
-  cursor: pointer;
+  cursor: zoom-in;
   transition: opacity 0.3s ease;
 }
 
@@ -476,7 +506,7 @@ main {
 }
 
 .grid-item {
-  cursor: pointer;
+  cursor: zoom-in;
   transition: opacity 0.3s ease;
 }
 
