@@ -26,7 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'IMG_8094.jpeg',
         'IMG_8492.jpeg',
         'IMG_8584.jpeg',
-        'IMG_8693.jpeg'
+        'IMG_8693.jpeg',
+        'IMG_8846.jpeg'
     ];
 
     // Layout patterns with weights (higher = more likely)
@@ -332,7 +333,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Close modal functionality
             freshModal.addEventListener('click', function(e) {
-                if (e.target === freshModal) {
+                if (e.target === freshModal || e.target === freshModalImage) {
                     closeModal();
                 }
             });
