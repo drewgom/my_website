@@ -31,6 +31,7 @@
     "IMG_4072.jpg",
     "IMG_4239.jpg",
     "IMG_4256.jpg",
+    "IMG_5026.jpg",
     "IMG_5333.jpg",
     "IMG_6452.jpeg",
     "IMG_6731.jpeg",
@@ -41,7 +42,7 @@
     "IMG_8693.jpeg",
     "IMG_8846.jpeg"
   ],
-  "count": 40,
+  "count": 41,
   "generated": "2026-04-21",
   "description": "Auto-generated manifest of images in assets/images/ directory. Run 'node generate-manifest.js' to update."
 }
