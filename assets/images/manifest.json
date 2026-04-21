@@ -8,7 +8,6 @@
     "DSC01117.JPG",
     "DSC01136.JPG",
     "DSC01174.JPG",
-    "DSC01212.JPG",
     "DSC01245.JPG",
     "DSC01265.JPG",
     "DSC01548.JPG",
@@ -34,7 +33,6 @@
     "IMG_5026.jpg",
     "IMG_5333.jpg",
     "IMG_6452.jpeg",
-    "IMG_6731.jpeg",
     "IMG_6734.jpeg",
     "IMG_8094.jpeg",
     "IMG_8492.jpeg",
@@ -42,7 +40,7 @@
     "IMG_8693.jpeg",
     "IMG_8846.jpeg"
   ],
-  "count": 41,
+  "count": 39,
   "generated": "2026-04-21",
   "description": "Auto-generated manifest of images in assets/images/ directory. Run 'node generate-manifest.js' to update."
 }
