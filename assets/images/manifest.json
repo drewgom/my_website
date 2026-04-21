@@ -34,10 +34,9 @@
     "IMG_5333.jpg",
     "IMG_6452.jpeg",
     "IMG_6734.jpeg",
-    "IMG_8492.jpeg",
-    "IMG_8584.jpeg"
+    "IMG_8492.jpeg"
   ],
-  "count": 36,
+  "count": 35,
   "generated": "2026-04-21",
   "description": "Auto-generated manifest of images in assets/images/ directory. Run 'node generate-manifest.js' to update."
 }
