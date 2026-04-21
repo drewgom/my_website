@@ -40,9 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
         'IMG_6734.jpeg',
         'IMG_8094.jpeg',
         'IMG_8492.jpeg',
-        'IMG_8584.jpeg',
-        'IMG_8693.jpeg',
-        'IMG_8846.jpeg'
+        'IMG_8584.jpeg'
     ];
 
     // Layout patterns with weights (higher = more likely)
