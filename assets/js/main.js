@@ -64,10 +64,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const container = document.getElementById('photos-container');
         if (!container) return;
 
-        // Shuffle photos array and take only 80% of them
-        const shuffledPhotos = [...photos].sort(() => Math.random() - 0.5);
-        const photosToShow = Math.floor(photos.length * 0.8);
-        const selectedPhotos = shuffledPhotos.slice(0, photosToShow);
+        // Shuffle photos array and show all of them
+        const selectedPhotos = [...photos].sort(() => Math.random() - 0.5);
         let photoIndex = 0;
         let html = '';
 
